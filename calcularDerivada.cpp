@@ -2,29 +2,28 @@
 
 using namespace std;
 
-void deriva(int poli[], int grau, int out[]) {
+void deriva(double poli[], int grau, double out[]) {
     int i = 0;
 
-    cout << "Digite o grau: ";
-    cin >> grau;
-
-    while(i < grau) {
+    while(i <= grau) {
         cout << "Digite o coeficiente: ";
         cin >> poli[i];
         i += 1;
     }
-
+    
     for(i = grau; i >= 1; i = i - 1) {
-        out[i - 1] = poli[i] * i;
-    }
+        out[1] = poli[i] * i;
 
-    cout << out[i] << endl;
+        cout << out[1] << " ";
+    }
 }
 
 int main() {
-    int grau = 0;
-    int poli[grau];
-    int out[grau];
+    int grau;
+    double poli[grau], out[grau - 1];
+
+    cout << "Digite o grau: ";
+    cin >> grau;
 
     deriva(poli, grau, out);
 
