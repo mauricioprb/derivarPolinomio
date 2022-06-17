@@ -6,15 +6,15 @@ void deriva(double poli[], int grau, double out[]) {
     int i = 0;
 
     while(i <= grau) {
-        cout << "Digite o coeficiente: ";
+        cout << "Digite o coeficiente do polinomio: ";
         cin >> poli[i];
         i++;
     }
     
-    for(i = grau; i >= 1; i = i--) {
+    for(i = grau; i >= 1; i--) {
         out[i] = poli[i] * i;
         
-        cout << out[i] << " ";
+        cout << out[i] << "x^" << i - 1 << " + 0";
     }
 }
 
