@@ -8,22 +8,23 @@ void deriva(double poli[], int grau, double out[]) {
     while(i <= grau) {
         cout << "Digite o coeficiente: ";
         cin >> poli[i];
-        i += 1;
+        i++;
     }
     
-    for(i = grau; i >= 1; i = i - 1) {
-        out[1] = poli[i] * i;
-
-        cout << out[1] << " ";
+    for(i = grau; i >= 1; i = i--) {
+        out[i] = poli[i] * i;
+        
+        cout << out[i] << " ";
     }
 }
 
 int main() {
     int grau;
-    double poli[grau], out[grau - 1];
 
     cout << "Digite o grau: ";
     cin >> grau;
+
+    double poli[grau], out[grau - 1];
 
     deriva(poli, grau, out);
 
